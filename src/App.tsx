@@ -14,6 +14,8 @@ function App() {
 		<>
 			<div className='App'>
 
+				<h1>React Hooks 🪝</h1>
+
 				<Section>
 					<Parent />
 				</Section>
