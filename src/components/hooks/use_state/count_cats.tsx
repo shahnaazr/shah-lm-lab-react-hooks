@@ -1,16 +1,18 @@
-export function CountCats() {
+import { useState } from "react";
 
-  const cats = ["🐈"].length;
+export function CountCats() {
+  const [cats, setCats] = useState<string[]>([]);
+
+  const handleClick = () => {
+    setCats([...cats, "🐈"]);
+  };
 
   return (
     <>
-    <h2>useState</h2>
+      <h2>useState</h2>
 
-    <p>{cats}</p>
-
-    <button>
-      There are ... cats 🥳
-    </button>
+      <p>{cats}</p>
+      <button onClick={handleClick}>There are {cats.length} cats 🥳</button>
     </>
   );
 }
